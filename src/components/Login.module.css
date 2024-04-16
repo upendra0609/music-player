@@ -1,0 +1,25 @@
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.login>img {
+  /* width: 100%; */
+  object-fit: contain;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.login>a {
+  padding: 20px;
+  background-color: #1DB954;
+  border-radius: 99px;
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
