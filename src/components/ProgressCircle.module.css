@@ -1,0 +1,7 @@
+.progressCircle {}
+
+circle {
+  transition: all 1s ease-in-out;
+  transform: rotate(93deg);
+  transform-origin: center center;
+}

@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import apiClient from "../spotify/spotify";
 import SongCard from "../components/SongCard";
 import Queue from "../components/Queue";
+import AudioPlayer from "../components/AudioPlayer";
 
 const Player = () => {
   const location = useLocation();
@@ -35,7 +36,9 @@ const Player = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.leftPlayerBody}></div>
+      <div className={styles.leftPlayerBody}>
+        <AudioPlayer currentTrack={currentTrack} />
+      </div>
       <div className={styles.rightPlayerBody}>
         <SongCard album={currentTrack?.album} />
         <Queue tracks={tracks} index={index} setIndex={setIndex} />

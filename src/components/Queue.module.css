@@ -39,6 +39,10 @@
   overflow-y: auto;
 }
 
+.queueList::-webkit-scrollbar {
+  display: none;
+}
+
 .queueItem {
   width: 100%;
   display: flex;

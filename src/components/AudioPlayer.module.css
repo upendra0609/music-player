@@ -1,0 +1,16 @@
+.playerBody {
+  width: 100%;
+  height: 44%;
+  display: flex;
+  margin: 3% 0%;
+  flex-direction: row;
+}
+
+
+.playerLeftBody {
+  width: 37%;
+}
+
+.playerRightBody {
+  width: 63%;
+}

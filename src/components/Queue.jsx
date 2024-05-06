@@ -15,7 +15,14 @@ const Queue = ({ tracks, index, setIndex }) => {
                 onClick={() => setIndex(i)}
               >
                 <p className={styles.trackName}>{track?.track?.name}</p>
-                <p>{track?.track?.duration_ms}</p>
+                <p>
+                  {Math.floor(track?.track?.duration_ms / 60000) +
+                    ":" +
+                    (
+                      "0" +
+                      Math.floor((track?.track?.duration_ms % 60000) / 1000)
+                    ).slice(-2)}
+                </p>
               </div>
             );
           })}
