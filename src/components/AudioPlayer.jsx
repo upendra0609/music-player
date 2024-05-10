@@ -52,7 +52,7 @@ const AudioPlayer = ({
   useEffect(() => {
     if (audioRef.current.src) {
       if (isPlaying) {
-        audioRef.current.play();
+        audioRef?.current?.play();
         startTimer();
       } else {
         clearInterval(intervalRef.current);
@@ -136,7 +136,7 @@ const AudioPlayer = ({
           percentage={currentPercentage}
           isPlaying={true}
           image={currentTrack?.album.images[0]?.url}
-          size={300}
+          size={250}
           color="#C96850"
         />
       </div>
