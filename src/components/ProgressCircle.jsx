@@ -34,6 +34,34 @@ const ProgressCircle = ({ percentage, isPlaying, image, size, color }) => {
             percentage={percentage}
           ></Circle>
         </g>
+        <def>
+          <clipPath id="myCircle">
+            <circle cx="50%" cy="50%" r={size / 2 - 30} fill="white" />
+          </clipPath>
+          <clipPath id="myInnerCircle">
+            <circle cx="50%" cy="50%" r={size / 2 - 100} fill="#FFFFFF" />
+          </clipPath>
+        </def>
+        <image
+          className={isPlaying ? styles.active : ""}
+          x={40}
+          y={40}
+          width={2 * (size / 2 - 40)}
+          height={2 * (size / 2 - 40)}
+          href="https://pngimg.com/uploads/vinyl/vinyl_PNG107.png"
+          // href={image}
+          clipPath="url(#myCircle)"
+        />
+        <image
+          className={isPlaying ? styles.active : ""}
+          x={100}
+          y={100}
+          width={2 * (size / 2 - 100)}
+          height={2 * (size / 2 - 100)}
+          // href={image}
+          // clipPath={`url(#${styles.myInnerCircle})`}
+          clipPath="url(#myInnerCircle)"
+        />
       </svg>
     </div>
   );

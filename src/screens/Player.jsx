@@ -37,7 +37,13 @@ const Player = () => {
   return (
     <div className={styles.container}>
       <div className={styles.leftPlayerBody}>
-        <AudioPlayer currentTrack={currentTrack} />
+        <AudioPlayer
+          currentTrack={currentTrack}
+          isPlaying={true}
+          currentIndex={index}
+          setCurretnIndex={setIndex}
+          total={tracks}
+        />
       </div>
       <div className={styles.rightPlayerBody}>
         <SongCard album={currentTrack?.album} />
